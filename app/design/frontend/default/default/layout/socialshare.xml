@@ -1,0 +1,29 @@
+<!--
+/**
+ * Softprodigy System Solutions Pvt. Ltd
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.idealiagroup.com/magento-ext-license.html
+ *
+ * @category    Softprodigy
+ * @package     Softprodigy_Socialshare
+ * @copyright   Copyright (c) 2013 Softprodigy System Solutions Pvt. Ltd (http://www.softprodigy.com)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<layout version="0.1.0">
+	<default>
+	   <reference name="head">
+		   <action method="addCss" ifconfig="socialshare/general/mode"><stylesheet>css/socialshare/social-share.css</stylesheet></action>
+	   </reference>
+		<reference name="before_body_end">			
+			<block type="core/template" name="softprodigy">
+				<action method="setTemplate" ifconfig="socialshare/general/mode"><template>softprodigy/socialshare.phtml</template></action>			
+			</block>
+		</reference>
+	</default>
+</layout>

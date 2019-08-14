@@ -1,0 +1,173 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Softprodigy
+ * @package    Softprodigy_Socialshare
+ * @copyright  Copyright (c) 2014 SoftProdigy <magento@softprodigy.com>
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <Softprodigy_Socialshare>
+            <version>1.0.1</version>
+        </Softprodigy_Socialshare>
+    </modules>
+
+
+    <global>
+        <models>
+            <socialshare>
+                <class>Softprodigy_Socialshare_Model</class>
+                <resourceModel>socialshare_entity</resourceModel>
+            </socialshare>
+            <socialshare_entity>
+	            <class>Softprodigy_Socialshare_Model_Entity</class>
+	            <entities>
+	            	<socialshare_entity>
+	            		<table>socialshare_entity</table>
+	            	</socialshare_entity>
+	            	<entity>
+	            		<table>socialshare_entity</table>
+	            	</entity>
+	            </entities>
+	         </socialshare_entity>
+        </models>
+        <blocks>
+            <socialshare>
+                <class>Softprodigy_Socialshare_Block</class>
+            </socialshare>
+        </blocks>
+        <helpers>
+            <socialshare>
+                <class>Softprodigy_Socialshare_Helper</class>
+            </socialshare>
+        </helpers>
+
+        <resources>
+         <socialshare_setup>
+            <setup>
+               <module>Softprodigy_Socialshare</module>
+               <class>Softprodigy_Socialshare_Model_Entity_Setup</class>
+            </setup>
+            <connection>
+               <use>core_setup</use>
+            </connection>
+         </socialshare_setup>
+         <socialshare_write>
+            <connection>
+               <use>core_write</use>
+            </connection>
+         </socialshare_write>
+         <socialshare_read>
+            <connection>
+               <use>core_read</use>
+            </connection>
+         </socialshare_read>
+      </resources>
+    </global>
+
+    <admin>
+        <routers>
+            <socialshare>
+                <use>admin</use>
+                <args>
+                    <module>Softprodigy_Socialshare</module>
+                    <frontName>socialshare</frontName>
+                </args>
+            </socialshare>
+        </routers>
+    </admin>
+
+    <adminhtml>
+		<menu>
+			<sociallinks translate="title" module="socialshare">
+				<title>Social Share</title>
+				<sort_order>91</sort_order> 
+				<children>
+					<managesocialshare translate="title" module="socialshare">
+						<title>Manage SocialShare</title>
+						<sort_order>11</sort_order> 
+						<action>socialshare/adminhtml_socialshare</action>
+					</managesocialshare>
+				</children>
+			</sociallinks>
+		</menu>
+		
+
+        <acl>
+            <resources>
+            	<all>
+					<title>Allow everything</title>
+				</all>
+                <admin>
+                    <children>
+                        <socialshare>
+                            <title>Socialshare</title>
+                            <products>
+                        		<scheduler>
+                           			 <title>Socialshare Products</title>
+                                </scheduler>
+                            </products>
+                        </socialshare>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <socialshare translate="title" module="socialshare">
+                                            <title>Socialshare</title>
+                                        </socialshare>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+
+		<layout>
+			<updates>
+				<socialshare module="Softprodigy_Socialshare">
+					<file>socialshare.xml</file>
+				</socialshare>
+			</updates>
+		</layout>
+    </adminhtml>
+
+	<frontend>
+       	<routers>
+            <Softprodigy_Socialshare>
+                <use>standard</use>
+                <args>
+                    <module>Softprodigy_Socialshare</module>
+                    <frontName>socialshare</frontName>
+                </args>
+            </Softprodigy_Socialshare>
+        </routers>
+
+		<layout>
+		    <updates>
+		        <socialshare module="Softprodigy_Socialshare">
+		            <file>socialshare.xml</file>
+		        </socialshare>
+		    </updates>
+		</layout>
+    </frontend>
+   
+   <default>
+        <socialshare>
+            <general>
+				<mode>1</mode>
+				<social_position>1</social_position>
+            </general>
+        </socialshare>
+    </default>
+</config>

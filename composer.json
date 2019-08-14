@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Softprodigy_Socialshare",
+    "type": "magento-module",
+    "license": "OSLv3.0",
+    "homepage": "",
+    "description": "Multiple social share links for your store.",
+    "authors": [
+    {
+        "name": "SoftProdigyINC",
+        "email": "magento@softprodigy.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

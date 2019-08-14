@@ -1,0 +1,39 @@
+.social-popout {
+    float: none;
+    height: 35px;
+    margin: 15px 10px;
+    transition: all 0.5s ease 0s;
+    width: 35px;
+}
+
+.entry-content img, .comment-content img, .widget img {
+    max-width: 100%;
+}
+
+.social-popout img {
+    border-radius: 50%;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.8);
+    margin: 8px;
+    transition: all 0.5s ease 0s;
+    width: 100%;
+}
+
+.social-popout img:hover {
+    box-shadow: 12px 12px 4px 1px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+.social-share-left .social-popout img:hover {
+    box-shadow: -12px 12px 4px 1px rgba(0, 0, 0, 0.3);
+    margin: 0 0 0 15px;;
+}
+
+.social-share-left { position:fixed; left:0; top: 25%; z-index: 999;}
+
+.social-share-right { position:fixed; right:10px; top: 25%; z-index: 999;}
+
+.social-share-bottom-left {position:fixed; left:0; width:auto; bottom:0;}
+.social-share-bottom-left div.social-popout { float:left; margin: 10px;}
+
+.social-share-bottom-right {position:fixed; right:0; width:auto; bottom:0}
+.social-share-bottom-right div.social-popout { float:left; margin: 10px;}
