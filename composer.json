@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Softprodigy_Socialshare",
+    "name": "openmage-module-fostering\/softprodigy_socialshare",
     "type": "magento-module",
-    "license": "OSLv3.0",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Multiple social share links for your store.",
     "authors": [
